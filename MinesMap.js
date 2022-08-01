@@ -136,7 +136,6 @@ class MinesMap {
         }
     }
     drawMines(x, y) {
-        log('画雷', this.minesArr)
         for (let i = 0; i < this.minesArr.length; i++) {
             let [y1, x1] = this.minesArr[i].split(',')
             y1 = Number(y1.slice(1))
@@ -144,7 +143,6 @@ class MinesMap {
             if (x1 === x && y1 === y) {
                 log('9999')
             } else {
-                // log('!!!!', x1, y1)
                 this.draw('mine', x1, y1)
             }
         }
@@ -249,7 +247,6 @@ class MinesMap {
             }
 
             if (this.enableDrag) {
-                // log(`可拖拽 移动  y${y},x${x}`)
                 let x1 = Math.floor(x / this.unit)
                 let y1 = Math.floor(y / this.unit)
 
@@ -264,7 +261,6 @@ class MinesMap {
                 if (s - 9 <= this.mines) {
                     this.mines = s - 9
                 }
-                // log('s', s, 'this.mines', this.mines)
 
                 this.columnsNum.value = x1
                 this.columnsNumLabel.innerHTML = x1
@@ -334,7 +330,6 @@ class MinesMap {
         }
         minesArr = minesArr.slice(nLen)
         minesArr.sort()
-        // log('雷的位置 minesArr', minesArr)
         return minesArr
     }
     initArr(lines, columns) {
@@ -362,7 +357,6 @@ class MinesMap {
             this.allCellArr[y][x] = 9
             this.countBomb(y, x)
         }
-        // log('最终地图', JSON.parse(JSON.stringify(allCellArr)))
     }
     setNoMine(x, y) {
         if ((x >= 0 && x < this.columns) && (y >= 0 && y < this.lines)) {
@@ -399,7 +393,6 @@ class MinesMap {
             if (x < this.borderX && y < this.borderY) {
                 let mbArr = ['左键', '中键', '右键']
                 let mb = mbArr[event.button]
-                // log('mb', mb)
                 if (mb === '左键' || mb === '中键') {
                     // 检测第一次点击，生成格子数据
                     if (this.firstClick) {
@@ -408,12 +401,11 @@ class MinesMap {
 
                         // 生成格子数据
                         this.createMap()
-                        this.fakeLog()
+                        // this.fakeLog()
                     }
 
                     this.clickCell(x1, y1)
                 } else if (mb === '右键') {
-                    log('右键')
                     // this.draw('flag', x1, y1)
                 }
             }
