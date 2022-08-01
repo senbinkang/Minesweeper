@@ -464,21 +464,21 @@ class MinesMap {
 
     __main() {
         const assets = {
-            '0': 'img/0.gif',
-            '1': 'img/1.gif',
-            '2': 'img/2.gif',
-            '3': 'img/3.gif',
-            '4': 'img/4.gif',
-            '5': 'img/5.gif',
-            '6': 'img/6.gif',
-            '7': 'img/7.gif',
-            '8': 'img/8.gif',
-            'ask': 'img/ask.gif',
-            'error': 'img/error.gif',
-            'blank': 'img/blank.gif',
-            'blood': 'img/blood.gif',
-            'flag': 'img/flag.gif',
-            'mine': 'img/mine.gif',
+            '0': './img/0.gif',
+            '1': './img/1.gif',
+            '2': './img/2.gif',
+            '3': './img/3.gif',
+            '4': './img/4.gif',
+            '5': './img/5.gif',
+            '6': './img/6.gif',
+            '7': './img/7.gif',
+            '8': './img/8.gif',
+            'ask': './img/ask.gif',
+            'error': './img/error.gif',
+            'blank': './img/blank.gif',
+            'blood': './img/blood.gif',
+            'flag': './img/flag.gif',
+            'mine': './img/mine.gif',
         }
         this.loadAssets(assets).then(() => {
             // 1、画空白格子（9x9）
