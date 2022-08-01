@@ -2,9 +2,32 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Title</title>
+  <title>扫雷</title>
+  <style media="screen">
+        canvas {
+            border: 1px solid #ccc;
+        }
+  </style>
 </head>
 <body>
+    <canvas id="id-canvas" width="400" height="400"></canvas>
+    <script src="utils.js"></script>
+    <div>
+        <label for="id-mines-num">雷数：</label>
+        <input id="id-mines-num" type="range" value="9" max="30" min="9">
+        <span class="mines-num-label"></span>
+    </div>
+    <div>
+        <label for="id-lines-num">行数：</label>
+        <input id="id-lines-num" type="range" value="9" max="15" min="9">
+        <span class="lines-num-label"></span>
+    </div>
+    <div>
+        <label for="id-columns-num">列数：</label>
+        <input id="id-columns-num" type="range" value="9" max="15" min="9">
+        <span class="columns-num-label"></span>
+    </div>
 
+    <script src="MinesMap.js"></script>
 </body>
 </html>
